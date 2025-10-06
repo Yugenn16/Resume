@@ -1,55 +1,13 @@
-/* Simple beginner-style CSS */
+// Simple JS for showing email
+const btn = document.getElementById('contactBtn');
+const email = document.getElementById('email');
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: lightblue;
-  text-align: center;
-  padding: 20px;
-}
-
-nav {
-  background-color: #333;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-
-nav a:hover {
-  background-color: #555;
-}
-
-section {
-  padding: 20px;
-}
-
-.project {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-footer {
-  background-color: lightgray;
-  text-align: center;
-  padding: 10px;
-}
+btn.addEventListener('click', function() {
+  if (email.style.display === 'none') {
+    email.style.display = 'block';
+    btn.textContent = 'Hide Email';
+  } else {
+    email.style.display = 'none';
+    btn.textContent = 'Click to Show Email';
+  }
+});
