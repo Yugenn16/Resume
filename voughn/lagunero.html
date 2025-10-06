@@ -1,52 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Simple beginner-style CSS */
 
-  <header>
-    <h1>My Portfolio</h1>
-    <p>Welcome to my personal page!</p>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+header {
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+}
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm a beginner web developer learning HTML, CSS, and JavaScript.</p>
-  </section>
+nav {
+  background-color: #333;
+}
 
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>This is my first project. It's very simple but I’m proud of it.</p>
-    </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>This is another small project I made while learning.</p>
-    </div>
-  </section>
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <button id="contactBtn">Click to Show Email</button>
-    <p id="email" style="display:none;">myemail@example.com</p>
-  </section>
+nav li {
+  margin: 0 10px;
+}
 
-  <footer>
-    <p>© 2025 My Portfolio</p>
-  </footer>
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+nav a:hover {
+  background-color: #555;
+}
+
+section {
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: lightgray;
+  text-align: center;
+  padding: 10px;
+}
