@@ -1,204 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lagunero</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        
-        <div class="logo">
-            <img src="./home picture/voughn.JPG" alt="Logo">
-            <span>Lagunero</span>
-        </div>
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my personal page!</p>
+  </header>
 
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Home Section -->
-    <section id="home">
-        <div class="title">
-            <h2>Hello! <br>I Am Voughn Joseph Lagunero</h2>
-            <h3>I’m a Front-End and Back-End Developer, focusing on building an interactive and user-friendly interface with complex 
-                algorithm and logic behind it for both websites and mobile apps.
-            </h3>
-            <a href="#contact" class="hire-btn">HIRE ME</a>
-        </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a beginner web developer learning HTML, CSS, and JavaScript.</p>
+  </section>
 
-        <!-- Image sa right side -->
-        <div class="home-img">
-            <img src="./home picture/voughn2.jpg.jpg" alt="Christian Photo">
-        </div>
-    </section>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>This is my first project. It's very simple but I’m proud of it.</p>
+    </div>
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>This is another small project I made while learning.</p>
+    </div>
+  </section>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <div class="aboutMe">
-            <img src="./home picture/voughn.JPG" alt="About Christian">
-            
-            <!-- Text container -->
-            <div class="about-text">
-                <h1>ABOUT ME</h1>
-                <p>
-                     Productive, goal-oriented, and hardworking individual with a strong sense of responsibility and integrity. 
-         Trustworthy and adaptable, with a commitment to both personal growth and contributing to organizational success. 
-         Skilled at working independently and in teams, with a proactive mindset for problem-solving and continuous improvement. 
-         Driven to expand technical knowledge, strengthen professional capabilities, and apply creativity in achieving company goals. 
-         Passionate about delivering results that foster innovation, efficiency, and sustainable progress.
-                </p><br><br>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <button id="contactBtn">Click to Show Email</button>
+    <p id="email" style="display:none;">myemail@example.com</p>
+  </section>
 
-                <div class="about-text">
-                    <h1>Educational Background</h1>
-                    <h3>Tertiary</h3>
-        <p><strong>Tarlac State University</strong> (Aug 2022 - Sept 2025)<br>
-        BS in Information Technology, Major in WMA</p><br>
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
 
-        <h3>Secondary</h3>
-        <p><strong>Saint Louis University Laboratory Highschool, Baguio City</strong> (2016 - 2022)<br>
-        </p><br>
-        <p><strong>Science Technical Institute, Baguio City</strong> (2019 - 2021)<br>
-        Science, Technology, Engineering, and Mathematics</p><br>
-
-
-        <h3>Elementary</h3>
-        <p><strong>Saint Louis University Laboratory Elementary School, Baguio City</strong> (2009 - 2016)</p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="skills-container">
-        <h1>MY SKILLS</h1>
-        <p>Here are the tools and technologies I use to build responsive and user-friendly websites along with its respective back-end.</p>
-        
-        <div class="skills-list">
-            <div class="skill">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-                <div class="progress-bar">
-                    <div class="progress html">80%</div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-                <div class="progress-bar">
-                    <div class="progress css">85%</div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <i class="fab fa-js"></i>
-                <h3>JavaScript</h3>
-                <div class="progress-bar">
-                    <div class="progress js">80%</div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <i class="fab fa-react"></i>
-                <h3>Android Studio</h3>
-                <div class="progress-bar">
-                    <div class="progress react">70%</div>
-                </div>
-            </div>
-
-            
-            <div class="skill">
-                <i class="fab fa-react"></i>
-                <h3>Kotlin</h3>
-                <div class="progress-bar">
-                    <div class="progress react">90%</div>
-                </div>
-            </div>
-
-            
-            <div class="skill">
-                <i class="fab fa-react"></i>
-                <h3>Nodejs</h3>
-                <div class="progress-bar">
-                    <div class="progress react">70%</div>
-                </div>
-            </div>
-
-             
-
-            
-            
-            </div><br><br>
-
-            <h1>Work Experience</h1>
-             <div class="skills-list">
-                <div class="skill">
-                <h3>SEO link Building (January 2021 - October 2021)</h3>
-        <ul>
-          <li>Navigating through web pages</li>
-          <li>Searching for Contacts about financial aid from other state universities</li>
-
-        </ul>
-        </div>
-<div class="skill">
-        <h3>Miya Miya Cafe (january 2023 - July 2023)</h3>
-        <ul>
-          <li>Doing daily grocery</li>
-          <li>Baking</li>
-          <li>Barista</li>
-          <li>Cashier</li>
-        </ul>
-        </div>
-
-             
-        </div>
-        </div>
-        </h1>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="info">
-            <div class="header">
-                <h2>CONTACT</h2>
-            </div>
-            <div class="body">
-                <ul>
-                    <li class="list">
-                        <img src="./contact pic/gmail.png" alt="Email">
-                        <div class="text"><span>Email: </span>voughnjosephlagunero@gmail.com</div>
-                    </li>
-                    <hr>
-                    <li class="list">
-                        <img src="./contact pic/location-pin.png" alt="Location">
-                        <div class="text"><span>Address: </span>8th Street Brgy. Balete, Tarlac City</div>
-                    </li>
-                    <hr>
-                    <li class="list">
-                        <img src="./contact pic/phone-call (1).png" alt="Phone">
-                        <div class="text"><span>Phone: </span>+63 969 110 0773</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-    </section>
-    <div class="back-button">
-    <a href="../index.html">← Back to Directory</a>
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
