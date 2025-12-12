@@ -197,9 +197,32 @@
             </ul>
         </div>
     </div>
-</section>
+
+    </section>
+
+    <div id="dog">
+        <h2>Random Dog Image</h2>
+        <img id="dog-image" src="" alt="Random Dog" style="max-width: 300px;">
+        <br><button onclick="getDogImage()">Get New Dog Image</button>
+    </div>
   <div class="back-button">
     <a href="../index.html">← Back to Directory</a>
   </div>
+<script>
+document.getElementById('dog').classList.add('info');
+</script>
+<script>
+function getDogImage() {
+    fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('dog-image').src = data.message;
+        })
+        .catch(error => {
+            document.getElementById('dog-image').alt = 'Unable to load dog image.';
+        });
+}
+getDogImage(); // Load one initially
+</script>
 </body>
 </html>
