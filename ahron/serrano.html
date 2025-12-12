@@ -172,10 +172,32 @@
                 </ul>
             </div>
         </div>
-        
+
     </section>
-    <div class="back-button">
+
+    <div id="joke">
+        <h2>Random Chuck Norris Joke</h2>
+        <p id="joke-data">Loading joke...</p>
+        <button onclick="getJoke()">Get New Joke</button>
+    </div>
+  <div class="back-button">
     <a href="../index.html">← Back to Directory</a>
   </div>
+<script>
+document.getElementById('joke').classList.add('info');
+</script>
+<script>
+function getJoke() {
+    fetch('https://api.chucknorris.io/jokes/random')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('joke-data').innerHTML = data.value;
+        })
+        .catch(error => {
+            document.getElementById('joke-data').innerHTML = 'Unable to load joke.';
+        });
+}
+getJoke(); // Load one initially
+</script>
 </body>
 </html>
