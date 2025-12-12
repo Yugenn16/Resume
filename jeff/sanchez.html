@@ -156,7 +156,7 @@
             <div class="body">
                 <ul>
                     <li class="list">
-                        <img src="./contact/gmail.png" alt="Email">
+                        <img src="./contact/contact.png" alt="Email">
                         <div class="text"><span>Email: </span>liljeff1726@gmail.com</div>
                     </li>
                     <hr>
@@ -172,10 +172,83 @@
                 </ul>
             </div>
         </div>
-        
+
     </section>
-    <div class="back-button">
-    <a href="jeff.html">← Back to Directory</a>
+
+    <div id="currency-display">
+        <h2>Currency Exchange Rates</h2>
+        <div id="currency-info">
+            <div id="currency-card">
+                <h3 id="base-currency">USD to Other Currencies</h3>
+                <div id="exchange-rates">
+                    <div class="rate-item">
+                        <span class="currency-code">EUR:</span>
+                        <span id="eur-rate">Loading...</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="currency-code">GBP:</span>
+                        <span id="gbp-rate">Loading...</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="currency-code">JPY:</span>
+                        <span id="jpy-rate">Loading...</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="currency-code">CAD:</span>
+                        <span id="cad-rate">Loading...</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="currency-code">AUD:</span>
+                        <span id="aud-rate">Loading...</span>
+                    </div>
+                </div>
+                <p id="last-updated">Last updated: Loading...</p>
+            </div>
+        </div>
+        <br><button onclick="getExchangeRates()">Refresh Rates</button>
+    </div>
+  <div class="back-button">
+    <a href="../index.html">← Back to Directory</a>
   </div>
+<script>
+document.getElementById('currency-display').classList.add('info');
+</script>
+<script>
+function getExchangeRates() {
+    // Use the free ExchangeRate-API
+    fetch('https://api.exchangerate-api.com/v4/latest/USD')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Exchange Rate API Response:', data);
+
+            // Update the exchange rates display
+            document.getElementById('eur-rate').textContent = data.rates.EUR.toFixed(4);
+            document.getElementById('gbp-rate').textContent = data.rates.GBP.toFixed(4);
+            document.getElementById('jpy-rate').textContent = data.rates.JPY.toFixed(4);
+            document.getElementById('cad-rate').textContent = data.rates.CAD.toFixed(4);
+            document.getElementById('aud-rate').textContent = data.rates.AUD.toFixed(4);
+
+            // Update last updated time
+            const now = new Date();
+            document.getElementById('last-updated').textContent = `Last updated: ${now.toLocaleString()}`;
+        })
+        .catch(error => {
+            console.error('Error loading exchange rates:', error);
+            document.getElementById('eur-rate').textContent = 'N/A';
+            document.getElementById('gbp-rate').textContent = 'N/A';
+            document.getElementById('jpy-rate').textContent = 'N/A';
+            document.getElementById('cad-rate').textContent = 'N/A';
+            document.getElementById('aud-rate').textContent = 'N/A';
+            document.getElementById('last-updated').textContent = 'Unable to load exchange rates. API might be temporarily unavailable.';
+        });
+}
+
+getExchangeRates(); // Load rates initially
+</script>
 </body>
 </html>
