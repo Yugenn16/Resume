@@ -171,10 +171,28 @@
                 </ul>
             </div>
         </div>
-        
+
     </section>
-    <div class="back-button">
+
+    <div id="location">
+        <h2>Your Location</h2>
+        <p id="location-data">Loading location...</p>
+    </div>
+  <div class="back-button">
     <a href="../index.html">← Back to Directory</a>
   </div>
+<script>
+document.getElementById('location').classList.add('info');
+</script>
+<script>
+fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('location-data').innerHTML = `City: ${data.city}, Country: ${data.country_name}`;
+    })
+    .catch(error => {
+        document.getElementById('location-data').innerHTML = 'Unable to load location data.';
+    });
+</script>
 </body>
 </html>
