@@ -195,10 +195,32 @@
                 </ul>
             </div>
         </div>
-        
+
     </section>
-    <div class="back-button">
+
+    <div id="cat-fact">
+        <h2>Random Cat Fact</h2>
+        <p id="cat-fact-data">Loading...</p>
+        <button onclick="getCatFact()">Get New Fact</button>
+    </div>
+  <div class="back-button">
     <a href="../index.html">← Back to Directory</a>
   </div>
+<script>
+document.getElementById('cat-fact').classList.add('info');
+</script>
+<script>
+function getCatFact() {
+    fetch('https://catfact.ninja/fact')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('cat-fact-data').innerHTML = data.fact;
+        })
+        .catch(error => {
+            document.getElementById('cat-fact-data').innerHTML = 'Unable to load cat fact.';
+        });
+}
+getCatFact(); // Load one initially
+</script>
 </body>
 </html>
