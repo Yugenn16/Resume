@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        
+        <div class="logo">
+            <img src="./home picture/me3.jpg" alt="Logo">
+            <span>Ahron Brix Serrano</span>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="title">
+            <h2>Hello! <br>I Am Ahron Brix D. Serrano</h2>
+            <h3>I’m a Back-End Developer passionate about building responsive and user-friendly websites.</h3>
+            <a href="#contact" class="hire-btn">HIRE ME</a>
+        </div>
+
+        <!-- Image sa right side -->
+        <div class="home-img">
+            <img src="./home picture/me.jpg" alt="Ahron Photo">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="aboutMe">
+            <img src="./home picture/me2.jpg" alt="About Ahron">
+            
+            <!-- Text container -->
+            <div class="about-text">
+                <h1>ABOUT ME</h1>
+                <p>
+                  I am an adaptable and dedicated individual seeking an opportunity that will enhance my skills,
+                   support my personal and professional growth,
+                    and allow me to contribute to the success of the company through hard work,
+                     determination, and teamwork.  
+                </p><br><br>
+                <div class="about-text">
+                    <h1>Educational Background</h1>
+                    
+                    <h3>Tertiary</h3>
+        <p><strong>Tarlac State University</strong> (Aug 2022 - Sept 2025)<br>
+        BS in Information Technology, Major in WMA</p><br>
+
+        <h3>Secondary</h3>
+        <p><strong>Our Lady of Ransom Catholic School</strong> (Jun 2016 - Mar 2022)</p>
+
+        <h3>Elementary</h3>
+        <p><strong>Scholastica De Leau Mer Academy</strong> (Jun 2010 - Mar 2016)</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="skills-container">
+        <h1>MY SKILLS</h1>
+        <p>Here are the tools and technologies I use to build responsive and user-friendly websites.</p>
+        
+        <div class="skills-list">
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <div class="progress-bar">
+                    <div class="progress html">80%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <div class="progress-bar">
+                    <div class="progress css">70%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress js">5%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <div class="progress-bar">
+                    <div class="progress react">0%</div>
+                </div>
+            </div>
+
+             
+            
+            
+            </div><br><br>
+
+            <h1>Work Experience</h1>
+             <div class="skills-list">
+                <div class="skill">
+                <h3>Barangay Volunteer (2024)</h3>
+        <ul>
+          <li>Participated in organizing and cleaning public areas.</li>
+          <li>Assisted local officials with event preparations.</li>
+        </ul>
+        </div>
+<div class="skill">
+        <h3>Event Volunteer (2023)</h3>
+        <ul>
+          <li>Assisted in organizing and setting up the event.</li>
+          <li>Guided guests and answered inquiries.</li>
+        </ul>
+        </div>
+<div class="skill">
+        <h3>Barangay Youth Program (2024)</h3>
+        <ul>
+            <li>Helped younger students with math and reading.</li>
+            <li>Prepared simple lesson plans.</li>
+        </ul>
+        </div>
+             
+        </div>
+        </div>
+        </h1>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="info">
+            <div class="header">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="body">
+                <ul>
+                    <li class="list">
+                        <img src="./contact pic/gmail.png" alt="Email">
+                        <div class="text"><span>Email: </span>ahronbrixserrano@gmail.com</div>
+                    </li>
+                    <hr>
+                    <li class="list">
+                        <img src="./contact pic/location-pin.png" alt="Location">
+                        <div class="text"><span>Address: </span>Matatalaib, Tarlac City.</div>
+                    </li>
+                    <hr>
+                    <li class="list">
+                        <img src="./contact pic/phone-call (1).png" alt="Phone">
+                        <div class="text"><span>Phone: </span>+63 928 837 1116</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="joke">
+        <h2>Random Chuck Norris Joke</h2>
+        <p id="joke-data">Loading joke...</p>
+        <button onclick="getJoke()">Get New Joke</button>
+    </div>
+  <div class="back-button">
+    <a href="../index.html">← Back to Directory</a>
+  </div>
+<script>
+document.getElementById('joke').classList.add('info');
+</script>
+<script>
+function getJoke() {
+    fetch('https://api.chucknorris.io/jokes/random')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('joke-data').innerHTML = data.value;
+        })
+        .catch(error => {
+            document.getElementById('joke-data').innerHTML = 'Unable to load joke.';
+        });
+}
+getJoke(); // Load one initially
+</script>
+</body>
+</html>

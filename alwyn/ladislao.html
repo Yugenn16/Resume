@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style-LADISLAO.css">
+  <script src="script-LADISLAO.js"></script>
+  <title>My Portfolio</title>
+ 
 </head>
 <body>
+  <header>
+    <h1>Alwyn Ghian M. Ladislao</h1>
+    <p>Front-end Web Developer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate web developer with a love for clean design and efficient code. I enjoy building user-friendly websites and learning new technologies.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5 & CSS3</li>
+      <li>JavaScript (ES6+)</li>
+      <li>React.js</li>
+      <li>Node.js</li>
+      <li>Responsive Design</li>
+    </ul>
+  </section>
+
+  <section class="project">
+    <h2>Capstone Project</h2>
+    <p><strong>Portfolio Website</strong> - A personal website to showcase my skills and projects. Check it out here: 
+    <a href="https://github.com/Ghian11/Capstone-V3" target="_blank">View Project</a></p>
+  </section>
+<script src="script-LADISLAO.js"></script>
 
     <nav>
         
@@ -196,3 +224,101 @@ fetch('https://ipapi.co/json/')
 </script>
 </body>
 </html>
+
+
+
+// Array of colors to cycle through
+const colors = ["#f4f6f9", "#e3f2fd", "#fce4ec", "#e8f5e9", "#fff8e1"];
+let currentColorIndex = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("changeBgBtn");
+
+  button.addEventListener("click", () => {
+    // Change body background color
+    document.body.style.backgroundColor = colors[currentColorIndex];
+    
+    // Move to next color
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+  });
+});
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #223349;
+  color: #ffffff;
+  border-radius: 0 0 10px 10px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #223349;
+  margin-bottom: 15px;
+  border-left: 4px solid #223349;
+  padding-left: 10px;
+}
+
+/* List Styling */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Project Section */
+.project a {
+  color: #1a73e8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+

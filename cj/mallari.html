@@ -174,10 +174,32 @@
                 </ul>
             </div>
         </div>
-        
+
     </section>
-    <div class="back-button">
+
+    <div id="fact">
+        <h2>Random Fact</h2>
+        <p id="fact-data">Loading fact...</p>
+        <button onclick="fetchFact()">Get New Fact</button>
+    </div>
+  <div class="back-button">
     <a href="../index.html">← Back to Directory</a>
   </div>
+<script>
+document.getElementById('fact').classList.add('info');
+</script>
+<script>
+function fetchFact() {
+    fetch('https://uselessfacts.jsph.pl/random.json?language=en')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('fact-data').innerHTML = data.text;
+        })
+        .catch(error => {
+            document.getElementById('fact-data').innerHTML = 'Unable to load fact.';
+        });
+}
+fetchFact(); // Load one initially
+</script>
 </body>
 </html>
