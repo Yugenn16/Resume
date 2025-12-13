@@ -37,6 +37,191 @@
   </section>
 <script src="script-LADISLAO.js"></script>
 
+    <nav>
+        
+        <div class="logo">
+            <img src="./home picture/me3.jpg" alt="Logo">
+            <span>Alwyn Ghian Ladislao</span>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="title">
+            <h2>Hello! <br>I Alwyn Ghian Ladislao</h2>
+            <h3>I’m a Front-End Developer passionate about building responsive and user-friendly websites.</h3>
+            <a href="#contact" class="hire-btn">HIRE ME</a>
+        </div>
+
+        <!-- Image sa right side -->
+        <div class="home-img">
+            <img src="./home picture/me.jpg" alt="Ahron Photo">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="aboutMe">
+            <img src="./home picture/me2.jpg" alt="About Ahron">
+            
+            <!-- Text container -->
+            <div class="about-text">
+                <h1>ABOUT ME</h1>
+                <p>
+                 I am a motivated and adaptable individual seeking an opportunity to develop my skills and gain valuable experience.
+                  I am committed to personal and professional growth while contributing to the success of the organization through hard work, determination, and a strong sense of teamwork.  
+                </p><br><br>
+                <div class="about-text">
+                    <h1>Educational Background</h1>
+                    
+                    <h3>Tertiary</h3>
+        <p><strong>Tarlac State University</strong> (Aug 2022 - Sept 2025)<br>
+        BS in Information Technology, Major in WMA</p><br>
+
+        <h3>Secondary</h3>
+        <p><strong>TARLAC NATIONAL HIGH SCHOOL</strong> (Jun 2016 - March 2022)</p>
+
+        <h3>Elementary</h3>
+        <p><strong>TARLAC WEST CENTRAL ELEMENTARY SCHOOL</strong> (Jun 2010 - March 2016)</p>
+        
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="skills-container">
+        <h1>MY SKILLS</h1>
+        <p>Here are the tools and technologies I use to build responsive and user-friendly websites.</p>
+        
+        <div class="skills-list">
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <div class="progress-bar">
+                    <div class="progress html">80%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <div class="progress-bar">
+                    <div class="progress css">70%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress js">5%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <div class="progress-bar">
+                    <div class="progress react">0%</div>
+                </div>
+            </div>
+
+             
+            
+            
+            </div><br><br>
+
+            <h1>Work Experience</h1>
+             <div class="skills-list">
+                <div class="skill">
+                <h3>Mang Inasal (2025) </h3>
+        <ul>
+          <li>Service Crew.</li>
+          <li>Helped prepare food and beverages following company standards.</li>
+        </ul>
+        </div>
+<div class="skill">
+        <h3>Student Assistant (2023)</h3>
+        <ul>
+          <li>Helped organize books and assisted students in locating resources.</li>
+          <li>Monitored library equipment and maintained a quiet study environment.</li>
+        </ul>
+        </div>
+<div class="skill">
+        <h3>Freelance Graphic Designer (2024)</h3>
+        <ul>
+            <li>Created simple designs for school organizations and events.</li>
+            <li>Managed deadlines and project requirements.</li>
+        </ul>
+        </div>
+             
+        </div>
+        </div>
+        </h1>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="info">
+            <div class="header">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="body">
+                <ul>
+                    <li class="list">
+                        <img src="./contact pic/gmail.png" alt="Email">
+                        <div class="text"><span>Email: </span>alwynladislao@gmail.com</div>
+                    </li>
+                    <hr>
+                    <li class="list">
+                        <img src="./contact pic/location-pin.png" alt="Location">
+                        <div class="text"><span>Address: </span>San Roque, Tarlac City.</div>
+                    </li>
+                    <hr>
+                    <li class="list">
+                        <img src="./contact pic/phone-call (1).png" alt="Phone">
+                        <div class="text"><span>Phone: </span>+63 910 134 9299</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="location">
+        <h2>Your Location</h2>
+        <p id="location-data">Loading location...</p>
+    </div>
+  <div class="back-button">
+    <a href="../index.html">← Back to Directory</a>
+  </div>
+<script>
+document.getElementById('location').classList.add('info');
+</script>
+<script>
+fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('location-data').innerHTML = `City: ${data.city}, Country: ${data.country_name}`;
+    })
+    .catch(error => {
+        document.getElementById('location-data').innerHTML = 'Unable to load location data.';
+    });
+</script>
 </body>
 </html>
 
